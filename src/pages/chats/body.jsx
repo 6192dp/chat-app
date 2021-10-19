@@ -11,7 +11,7 @@ const ChatBody = ({ messageArray, chatRef }) => {
                 >
                     {messageArray.map((item) => (
                         <div className="flex m-2">
-                            <div className="bg-blue-500 max-w-prose ml-auto p-1 text-white">
+                            <div className="bg-blue-500 max-w-prose ml-auto p-2 text-white rounded-xl rounded-br-none">
                                 {item}
                             </div>
                         </div>
@@ -21,7 +21,7 @@ const ChatBody = ({ messageArray, chatRef }) => {
         )
     }
     return (
-        <div className="bg-gray text-center flex justify-center items-center flex-grow">
+        <div className="bg-gray text-center flex justify-center items-center flex-grow font-medium text-xl">
             This is the beginning of your conversation!
         </div>
     )

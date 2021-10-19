@@ -28,9 +28,9 @@ const MessageInput = ({ messageArray, updateMessageArray, chatRef }) => {
     }
 
     return (
-        <div className="border-t-2 flex justify-between w-full">
+        <div className="border-t-2 border-gray-400 flex justify-between w-full mb-1 ml-0.5">
             <input
-                className="px-2 py-4"
+                className="px-2 py-4 flex-grow"
                 type="text"
                 placeholder="Type a message"
                 value={text}
@@ -39,7 +39,9 @@ const MessageInput = ({ messageArray, updateMessageArray, chatRef }) => {
             />
             <button
                 type="button"
-                className="px-4 text-red-500 font-bold"
+                className={`px-8 text-white font-bold rounded-2xl mt-1 mx-2 ${
+                    text.length ? "bg-red-500" : "bg-gray-300"
+                }`}
                 onClick={handleMessageSend}
             >
                 SEND

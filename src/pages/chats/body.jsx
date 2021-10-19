@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from "react"
 
-export const ChatBody = () => {
-    const [messageArray, updateMessageArray] = useState([]);
-    if (messageArray?.length){
-        return(<div class="bg-gray">
-        Hello
-            </div>)
-    } 
-    return(<div class="bg-gray">
-    This is the beginning of your conversation!
-        </div>)
+const ChatBody = () => {
+    const [messageArray] = useState(["hi"])
+    if (messageArray?.length) {
+        return (
+            <div className="bg-gray">
+                {messageArray.map((item, index) => (
+                    <>
+                        <div>{item}</div>
+                        <div>{index}</div>
+                    </>
+                ))}
+            </div>
+        )
+    }
+    return (
+        <div className="bg-gray">
+            This is the beginning of your conversation!
+        </div>
+    )
 }
+
+export default ChatBody

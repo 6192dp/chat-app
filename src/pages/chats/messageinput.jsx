@@ -30,7 +30,7 @@ const MessageInput = ({ messageArray, updateMessageArray, chatRef }) => {
     return (
         <div className="border-t-2 border-gray-400 flex justify-between w-full mb-1 ml-0.5">
             <input
-                className="px-2 py-4 flex-grow"
+                className="px-2 py-4 flex-grow outline-none"
                 type="text"
                 placeholder="Type a message"
                 value={text}
